@@ -49,24 +49,24 @@
 ## 🏗️ Architecture
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                    EdgeLLM Framework                          │
-│          Full-Stack Small Language Model Suite                │
+│                    EdgeLLM Framework                         │
+│          Full-Stack Small Language Model Suite               │
 ├──────────────────────────────────────────────────────────────┤
-│                                                                │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐   │
-│  │ Component 1: │  │ Component 2: │  │  Component 3:    │   │
-│  │  RAG System  │  │  LoRA Train  │  │ Query Pipeline   │   │
-│  ├──────────────┤  ├──────────────┤  ├──────────────────┤   │
-│  │              │  │              │  │                  │   │
-│  │ • Retrieval  │  │ • 13 Models  │  │ • NL → Query    │   │
-│  │ • Inference  │  │ • 4-bit LoRA │  │ • Auto-JOIN     │   │
-│  │ • Feedback   │  │ • Custom Data│  │ • CSV/Excel     │   │
-│  │ • Live Update│  │ • Templates  │  │ • 3B SLM        │   │
-│  │              │  │              │  │                  │   │
-│  └──────────────┘  └──────────────┘  └──────────────────┘   │
-│                                                                │
+│                                                              │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐    │
+│  │ Component 1: │  │ Component 2: │  │  Component 3:    │    │
+│  │  RAG System  │  │  LoRA Train  │  │ Query Pipeline   │    │
+│  ├──────────────┤  ├──────────────┤  ├──────────────────┤    │
+│  │              │  │              │  │                  │    │
+│  │ • Retrieval  │  │ • 13 Models  │  │ • NL → Query     │    │
+│  │ • Inference  │  │ • 4-bit LoRA │  │ • Auto-JOIN      │    │
+│  │ • Feedback   │  │ • Custom Data│  │ • CSV/Excel      │    │
+│  │ • Live Update│  │ • Templates  │  │ • 3B SLM         │    │
+│  │              │  │              │  │                  │    │
+│  └──────────────┘  └──────────────┘  └──────────────────┘    │
+│                                                              │
 │  ┌──────────────────────────────────────────────────────────┐│
-│  │         Unified Deployment Interface (Streamlit)          ││
+│  │         Unified Deployment Interface (Streamlit)         ││
 │  └──────────────────────────────────────────────────────────┘│
 └──────────────────────────────────────────────────────────────┘
 ```
@@ -82,7 +82,6 @@
 | Aspect | Large LMs | EdgeLLM (Small LMs) |
 |--------|-----------|---------------------|
 | **Cost** | $10-100 per 1M tokens | $0 (self-hosted) |
-| **Latency** | 500-2000ms | 50-200ms |
 | **Privacy** | Cloud-based | 100% local |
 | **Hardware** | API only | Consumer GPU (6GB+) |
 | **Customization** | Limited | Full fine-tuning control |
@@ -103,7 +102,7 @@
 
 ### Installation
 ```bash
-git clone https://github.com/yourusername/EdgeLLM.git
+git clone https://github.com/darrencxl0301/EdgeLLM.git
 cd EdgeLLM
 pip install -r requirements.txt
 ```
@@ -138,10 +137,6 @@ python inference_rag.py \
     --mode interactive
 ```
 
-**Sample queries:**
-- "OnTheGo MM和GM的尺寸有什么区别？"
-- "如何保养我的手袋？"
-
 ---
 
 ### Option 3: Component 3 - Schema-Action Queries (CLI)
@@ -164,14 +159,14 @@ python schema_action.py \
 
 ## 📊 Supported Small Language Models
 
-| Model Family | Parameters | Training Script | VRAM | Inference Speed |
+| Model Family | Parameters | Training Script | Inference Speed |
 |-------------|-----------|-----------------|------|-----------------|
-| **Qwen** | 0.5B-14B | `train_qwen_lora*.py` | 6GB-16GB | Fast |
-| **DeepSeek** | 1.5B-14B | `train_deepseek_lora*.py` | 6GB-20GB | Fast |
-| **Llama** | 1B-8B | `train_llama_lora*.py` | 6GB-16GB | Fast |
-| **Gemma** | 4B | `train_gemma_lora.py` | 8GB | Medium |
-| **Mistral** | 7B | `train_mistral_lora.py` | 12GB | Medium |
-| **SmolLM** | 1.7B | `train_smollm_lora.py` | 6GB | Very Fast |
+| **Qwen** | 0.5B-14B | `train_qwen_lora*.py` | Fast |
+| **DeepSeek** | 1.5B-14B | `train_deepseek_lora*.py` | Fast |
+| **Llama** | 1B-8B | `train_llama_lora*.py` | Fast |
+| **Gemma** | 4B | `train_gemma_lora.py` | Medium |
+| **Mistral** | 7B | `train_mistral_lora.py` | Medium |
+| **SmolLM** | 1.7B | `train_smollm_lora.py` | Very Fast |
 
 **All models support:**
 - ✅ 4-bit QLoRA training
