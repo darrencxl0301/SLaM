@@ -389,7 +389,7 @@ Tunku Abdul Rahman University of Management and Technology
 Jalan Genting Kelang, Setapak  
 53300 Kuala Lumpur, Malaysia
 
-🌐 Website: [https://cbiev.tarc.edu.my)](https://cbiev.tarc.edu.my)
+🌐 Website: [https://cbiev.tarc.edu.my](https://cbiev.tarc.edu.my)
 
 ---
 
