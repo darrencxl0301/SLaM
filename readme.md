@@ -496,7 +496,7 @@ Jalan Genting Kelang, Setapak
 
 ⭐ **Star this repo if EdgeLLM helps your business or research!**
 
-[Report Bug](https://github.com/yourusername/EdgeLLM/issues) · [Request Feature](https://github.com/yourusername/EdgeLLM/issues) · [Discussions](https://github.com/yourusername/EdgeLLM/discussions)
+[Report Bug](https://github.com/darrencxl0301/EdgeLLM/issues) · [Request Feature](https://github.com/darrencxl0301/EdgeLLM/issues) · [Discussions](https://github.com/darrencxl0301/EdgeLLM/discussions)
 
 **Made with ❤️ for democratizing AI**
 
