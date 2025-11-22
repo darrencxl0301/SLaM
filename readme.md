@@ -1,4 +1,4 @@
-# SLam: Small Language Model Deployment Framework
+# SLaM: Small Language Model Deployment Framework
 
 <div align="center">
 
@@ -17,9 +17,9 @@
 
 ---
 
-## 🎯 What is SLam?
+## 🎯 What is SLaM?
 
-**SLam** is a production-ready framework for deploying **Small Language Models (0.5B-14B parameters)** on edge devices and consumer hardware (≥6GB VRAM).
+**SLaM** is a production-ready framework for deploying **Small Language Models (0.5B-14B parameters)** on edge devices and consumer hardware (≥6GB VRAM).
 
 ### Two Integrated Components:
 
@@ -42,7 +42,7 @@
 ## 🏗️ Architecture
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                    SLam Framework                         │
+│                    SLaM Framework                         │
 │          Small Language Model Deployment Suite               │
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
@@ -66,13 +66,13 @@
 
 ---
 
-## 🌟 Why SLam?
+## 🌟 Why SLaM?
 
 ### The Small Language Model Revolution
 
 **Large LMs (GPT-4, Claude) vs Small LMs (0.5B-14B)**
 
-| Aspect | Large LMs | SLam (Small LMs) |
+| Aspect | Large LMs | SLaM (Small LMs) |
 |--------|-----------|---------------------|
 | **Cost** | $10-100 per 1M tokens | $0 (self-hosted) |
 | **Privacy** | Cloud-based | 100% local |
@@ -94,8 +94,8 @@
 
 ### Installation
 ```bash
-git clone https://github.com/darrencxl0301/SLam.git
-cd SLam
+git clone https://github.com/darrencxl0301/SLaM.git
+cd SLaM
 pip install -r requirements.txt
 ```
 
@@ -173,7 +173,7 @@ python schema_action.py \
 
 ### Current Text-to-SQL Limitations:
 
-| Challenge | Traditional Systems | SLam Solution |
+| Challenge | Traditional Systems | SLaM Solution |
 |-----------|-------------------|------------------|
 | **Model Size** | 20B+ params (GPT-4, Claude) | 3B params (Llama-3.2-3B) |
 | **Infrastructure** | PostgreSQL/MySQL setup | Direct CSV/Excel access |
@@ -326,13 +326,13 @@ Contributions welcome!
 
 ## 📝 Citation
 ```bibtex
-@software{SLam2025,
-  title={SLam: Small Language Model Deployment Framework},
+@software{SLaM2025,
+  title={SLaM: Small Language Model Deployment Framework},
   author={Darren & Lim},
   year={2025},
   institution={Tunku Abdul Rahman University of Management and Technology (TARUMT)},
   organization={Centre for Business, Economics and Intelligent Ventures (CBEIV)},
-  url={https://github.com/darrencxl0301/SLam}
+  url={https://github.com/darrencxl0301/SLaM}
 }
 ```
 
@@ -417,9 +417,9 @@ Jalan Genting Kelang, Setapak
 
 <div align="center">
 
-⭐ **Star this repo if SLam helps your business or research!**
+⭐ **Star this repo if SLaM helps your business or research!**
 
-[Report Bug](https://github.com/darrencxl0301/SLam/issues) · [Request Feature](https://github.com/darrencxl0301/SLam/issues) · [Discussions](https://github.com/darrencxl0301/SLam/discussions)
+[Report Bug](https://github.com/darrencxl0301/SLaM/issues) · [Request Feature](https://github.com/darrencxl0301/SLaM/issues) · [Discussions](https://github.com/darrencxl0301/SLaM/discussions)
 
 **Made with ❤️ for democratizing AI**
 
