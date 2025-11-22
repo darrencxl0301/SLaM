@@ -1,4 +1,4 @@
-# SLam: Full-Stack Small Language Model Framework
+# SLam: Small Language Model Deployment Framework
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 
 *Enterprise-grade Small Language Models on consumer hardware*
 
-**Three Powerful Components**: RAG + LoRA Training + Structured Querying
+**Two Powerful Components**: RAG + Structured Querying
 
 [📖 Documentation](#documentation) | [🚀 Quick Start](#quick-start) | [🤝 Collaboration](#collaboration-opportunities)
 
@@ -19,25 +19,18 @@
 
 ## 🎯 What is SLam?
 
-**SLam** is a complete, production-ready framework for deploying **Small Language Models (0.5B-14B parameters)** on edge devices and consumer hardware (≥6GB VRAM).
+**SLam** is a production-ready framework for deploying **Small Language Models (0.5B-14B parameters)** on edge devices and consumer hardware (≥6GB VRAM).
 
-### Three Integrated Components:
+### Two Integrated Components:
 
 #### 📚 Component 1: Conversational RAG System
-**Train + Deploy domain-specific chatbots**
+**Deploy domain-specific chatbots**
 - ✅ 13 SLM families (Qwen, Llama, DeepSeek, Gemma, Mistral, SmolLM)
-- ✅ QLoRA 4-bit fine-tuning pipeline
 - ✅ FAISS vector retrieval for accurate context
 - ✅ Live feedback system with instant knowledge updates
+- ✅ Multi-language support (EN/CN)
 
-#### 🔧 Component 2: LoRA Training Pipeline
-**Efficient fine-tuning on consumer GPUs**
-- ✅ 4-bit quantized training (6GB VRAM minimum)
-- ✅ 13 pre-configured training scripts for different models
-- ✅ Custom dataset preparation utilities
-- ✅ Hyperparameter templates and best practices
-
-#### 🔍 Component 3: Schema-Action Query System
+#### 🔍 Component 2: Schema-Action Query System
 **SQL-like queries without databases using Small LMs**
 - ✅ Natural language → Structured data queries
 - ✅ Multi-table auto-JOIN with intelligent planning
@@ -50,20 +43,20 @@
 ```
 ┌──────────────────────────────────────────────────────────────┐
 │                    SLam Framework                         │
-│          Full-Stack Small Language Model Suite               │
+│          Small Language Model Deployment Suite               │
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────────┐    │
-│  │ Component 1: │  │ Component 2: │  │  Component 3:    │    │
-│  │  RAG System  │  │  LoRA Train  │  │ Query Pipeline   │    │
-│  ├──────────────┤  ├──────────────┤  ├──────────────────┤    │
-│  │              │  │              │  │                  │    │
-│  │ • Retrieval  │  │ • 13 Models  │  │ • NL → Query     │    │
-│  │ • Inference  │  │ • 4-bit LoRA │  │ • Auto-JOIN      │    │
-│  │ • Feedback   │  │ • Custom Data│  │ • CSV/Excel      │    │
-│  │ • Live Update│  │ • Templates  │  │ • 3B SLM         │    │
-│  │              │  │              │  │                  │    │
-│  └──────────────┘  └──────────────┘  └──────────────────┘    │
+│  ┌──────────────────────────┐  ┌──────────────────────────┐  │
+│  │    Component 1:          │  │    Component 2:          │  │
+│  │    RAG System            │  │    Query Pipeline        │  │
+│  ├──────────────────────────┤  ├──────────────────────────┤  │
+│  │                          │  │                          │  │
+│  │ • Retrieval              │  │ • NL → Query             │  │
+│  │ • Inference              │  │ • Auto-JOIN              │  │
+│  │ • Feedback               │  │ • CSV/Excel              │  │
+│  │ • Live Update            │  │ • 3B SLM                 │  │
+│  │                          │  │                          │  │
+│  └──────────────────────────┘  └──────────────────────────┘  │
 │                                                              │
 │  ┌──────────────────────────────────────────────────────────┐│
 │  │         Unified Deployment Interface (Streamlit)         ││
@@ -90,11 +83,10 @@
 
 ### Our Value Proposition
 
-**Not just smaller models** — A complete development stack:
-1. **Train** your own SLM with efficient LoRA (Component 2)
-2. **Enhance** with knowledge retrieval (Component 1: RAG)
-3. **Query** structured data without SQL (Component 3: Schema-Action)
-4. **Deploy** with production-ready UI (Streamlit)
+**Not just smaller models** — A complete deployment stack:
+1. **Deploy** pre-trained or custom SLMs with knowledge retrieval (Component 1: RAG)
+2. **Query** structured data without SQL (Component 2: Schema-Action)
+3. **Monitor** with production-ready UI and feedback system (Streamlit)
 
 ---
 
@@ -120,7 +112,7 @@ Access at `http://localhost:8501`
 
 **Features:**
 - ✅ Component 1: RAG chatbot with live feedback
-- ✅ Component 3: Natural language data queries
+- ✅ Component 2: Natural language data queries
 - ✅ Real-time knowledge base updates
 - ✅ User feedback collection system
 
@@ -139,7 +131,7 @@ python inference_rag.py \
 
 ---
 
-### Option 3: Component 3 - Schema-Action Queries (CLI)
+### Option 3: Component 2 - Schema-Action Queries (CLI)
 ```bash
 cd schema_action
 
@@ -159,25 +151,25 @@ python schema_action.py \
 
 ## 📊 Supported Small Language Models
 
-| Model Family | Parameters | Training Script | Inference Speed |
-|-------------|-----------|-----------------|-----------------|
-| **Qwen** | 0.5B-14B | `train_qwen_lora*.py` | Fast |
-| **DeepSeek** | 1.5B-14B | `train_deepseek_lora*.py` | Fast |
-| **Llama** | 1B-8B | `train_llama_lora*.py` | Fast |
-| **Gemma** | 4B | `train_gemma_lora.py` | Medium |
-| **Mistral** | 7B | `train_mistral_lora.py` | Medium |
-| **SmolLM** | 1.7B | `train_smollm_lora.py` | Very Fast |
+| Model Family | Parameters | Inference Speed | Hardware Requirement |
+|-------------|-----------|-----------------|---------------------|
+| **Qwen** | 0.5B-14B | Fast | 5-12GB VRAM |
+| **DeepSeek** | 1.5B-14B | Fast | 6-12GB VRAM |
+| **Llama** | 1B-8B | Fast | 5-10GB VRAM |
+| **Gemma** | 4B | Medium | 6GB VRAM |
+| **Mistral** | 7B | Medium | 8GB VRAM |
+| **SmolLM** | 1.7B | Very Fast | 5GB VRAM |
 
 
 **All models support:**
-- ✅ 4-bit QLoRA training
 - ✅ FAISS RAG integration
 - ✅ Multi-language deployment
 - ✅ Edge device optimization
+- ✅ 4-bit quantization for efficient inference
 
 ---
 
-## 🎯 Component 3: Why Schema-Action Matters
+## 🎯 Component 2: Why Schema-Action Matters
 
 ### Current Text-to-SQL Limitations:
 
@@ -204,11 +196,10 @@ python schema_action.py \
 
 | Task | Min VRAM | Recommended | Speed |
 |------|----------|-------------|-------|
-| **LoRA Training (4-bit)** | 6GB | 12GB | ~500 samples/hr |
 | **Inference** | 5GB | 6GB | ~2-5 tokens/sec |
 | **RAG Indexing** | 2GB RAM | 4GB RAM | ~500 pairs/sec |
 
-### Component 3: Schema-Action Query
+### Component 2: Schema-Action Query
 
 | Task | Min VRAM | Recommended | Notes |
 |------|----------|-------------|-------|
@@ -223,7 +214,7 @@ python schema_action.py \
 
 ## 🎨 Industry Use Cases
 
-| Industry | Component 1 (RAG) | Component 3 (Query) |
+| Industry | Component 1 (RAG) | Component 2 (Query) |
 |----------|-------------------|---------------------|
 | 🛍️ **E-commerce** | Product Q&A chatbot | Sales analytics |
 | 🏢 **HR** | Policy assistant | Employee data lookups |
@@ -244,7 +235,7 @@ python schema_action.py \
 - ✅ **100x cheaper** - No per-token costs
 - ✅ **Complete privacy** - Data never leaves your infrastructure
 - ✅ **Unlimited scaling** - No rate limits
-- ✅ **Full customization** - Fine-tune on your exact domain
+- ✅ **Full customization** - Supports custom fine-tuned models
 
 ### vs. Traditional Text-to-SQL:
 - ✅ **10x smaller model** - 3B vs 20B+ parameters
@@ -255,7 +246,7 @@ python schema_action.py \
 ### vs. Other RAG Frameworks:
 - ✅ **Multi-model support** - 13 SLM families
 - ✅ **Live feedback loop** - Instant knowledge updates
-- ✅ **Complete stack** - Training + RAG + Deployment
+- ✅ **Complete stack** - RAG + Query + Deployment
 - ✅ **Edge-optimized** - Consumer GPU deployment
 
 ---
@@ -285,7 +276,7 @@ Tunku Abdul Rahman University of Management and Technology (TARUMT)
 
 **We provide:**
 - ✅ Technical consultation and guidance
-- ✅ Custom model training support
+- ✅ Custom model deployment support
 - ✅ Domain-specific implementation assistance
 - ✅ Research collaboration opportunities
 - ✅ Training workshops and seminars
@@ -299,14 +290,6 @@ Tunku Abdul Rahman University of Management and Technology (TARUMT)
 streamlit run deployment/streamlit_app.py
 ```
 
-### Component 1: Train Your Own Model
-```bash
-cd conversational_rag/lora_trainer
-python train_qwen_lora.py \
-    --data_path your_training_data.jsonl \
-    --output_dir ./models/your_domain_lora
-```
-
 ### Component 1: Run RAG Inference
 ```bash
 cd conversational_rag
@@ -316,7 +299,7 @@ python inference_rag.py \
     --mode interactive
 ```
 
-### Component 3: Query Your Data
+### Component 2: Query Your Data
 ```bash
 cd schema_action
 python schema_action.py \
@@ -344,7 +327,7 @@ Contributions welcome!
 ## 📝 Citation
 ```bibtex
 @software{SLam2025,
-  title={SLam: Full-Stack Small Language Model Framework},
+  title={SLam: Small Language Model Deployment Framework},
   author={Darren & Lim},
   year={2025},
   institution={Tunku Abdul Rahman University of Management and Technology (TARUMT)},
@@ -400,7 +383,6 @@ Jalan Genting Kelang, Setapak
 - Powered by [Qwen](https://github.com/QwenLM/Qwen), [Llama](https://llama.meta.com/), [DeepSeek](https://github.com/deepseek-ai), and more
 - UI with [Streamlit](https://streamlit.io/)
 - Vector search with [FAISS](https://github.com/facebookresearch/faiss)
-- Training with [PEFT](https://github.com/huggingface/peft) and [bitsandbytes](https://github.com/TimDettmers/bitsandbytes)
 
 ### Special Thanks
 - **TARUMT Faculty of Computing and Information Technology** for research support and infrastructure
@@ -413,7 +395,7 @@ Jalan Genting Kelang, Setapak
 ## 🎯 Roadmap
 
 ### Current Version (v0.1.0)
-- ✅ 13 SLM training scripts
+- ✅ 13 SLM deployment support
 - ✅ RAG system with FAISS
 - ✅ Schema-Action query pipeline
 - ✅ Streamlit deployment interface
@@ -422,7 +404,6 @@ Jalan Genting Kelang, Setapak
 ### Upcoming (v0.2.0)
 - 🔄 PostgreSQL/MongoDB connectors
 - 🔄 Multi-language UI (EN/CN/MS)
-- 🔄 Automated hyperparameter tuning
 - 🔄 Model compression techniques
 - 🔄 REST API interface
 
