@@ -1,4 +1,4 @@
-# EdgeLLM: Full-Stack Small Language Model Framework
+# SLam: Full-Stack Small Language Model Framework
 
 <div align="center">
 
@@ -17,9 +17,9 @@
 
 ---
 
-## 🎯 What is EdgeLLM?
+## 🎯 What is SLam?
 
-**EdgeLLM** is a complete, production-ready framework for deploying **Small Language Models (0.5B-14B parameters)** on edge devices and consumer hardware (≥6GB VRAM).
+**SLam** is a complete, production-ready framework for deploying **Small Language Models (0.5B-14B parameters)** on edge devices and consumer hardware (≥6GB VRAM).
 
 ### Three Integrated Components:
 
@@ -49,7 +49,7 @@
 ## 🏗️ Architecture
 ```
 ┌──────────────────────────────────────────────────────────────┐
-│                    EdgeLLM Framework                         │
+│                    SLam Framework                         │
 │          Full-Stack Small Language Model Suite               │
 ├──────────────────────────────────────────────────────────────┤
 │                                                              │
@@ -73,13 +73,13 @@
 
 ---
 
-## 🌟 Why EdgeLLM?
+## 🌟 Why SLam?
 
 ### The Small Language Model Revolution
 
 **Large LMs (GPT-4, Claude) vs Small LMs (0.5B-14B)**
 
-| Aspect | Large LMs | EdgeLLM (Small LMs) |
+| Aspect | Large LMs | SLam (Small LMs) |
 |--------|-----------|---------------------|
 | **Cost** | $10-100 per 1M tokens | $0 (self-hosted) |
 | **Privacy** | Cloud-based | 100% local |
@@ -102,8 +102,8 @@
 
 ### Installation
 ```bash
-git clone https://github.com/darrencxl0301/EdgeLLM.git
-cd EdgeLLM
+git clone https://github.com/darrencxl0301/SLam.git
+cd SLam
 pip install -r requirements.txt
 ```
 
@@ -181,7 +181,7 @@ python schema_action.py \
 
 ### Current Text-to-SQL Limitations:
 
-| Challenge | Traditional Systems | EdgeLLM Solution |
+| Challenge | Traditional Systems | SLam Solution |
 |-----------|-------------------|------------------|
 | **Model Size** | 20B+ params (GPT-4, Claude) | 3B params (Llama-3.2-3B) |
 | **Infrastructure** | PostgreSQL/MySQL setup | Direct CSV/Excel access |
@@ -343,13 +343,13 @@ Contributions welcome!
 
 ## 📝 Citation
 ```bibtex
-@software{edgellm2025,
-  title={EdgeLLM: Full-Stack Small Language Model Framework},
+@software{SLam2025,
+  title={SLam: Full-Stack Small Language Model Framework},
   author={Darren & Lim},
   year={2025},
   institution={Tunku Abdul Rahman University of Management and Technology (TARUMT)},
   organization={Centre for Business, Economics and Intelligent Ventures (CBEIV)},
-  url={https://github.com/darrencxl0301/EdgeLLM}
+  url={https://github.com/darrencxl0301/SLam}
 }
 ```
 
@@ -436,9 +436,9 @@ Jalan Genting Kelang, Setapak
 
 <div align="center">
 
-⭐ **Star this repo if EdgeLLM helps your business or research!**
+⭐ **Star this repo if SLam helps your business or research!**
 
-[Report Bug](https://github.com/darrencxl0301/EdgeLLM/issues) · [Request Feature](https://github.com/darrencxl0301/EdgeLLM/issues) · [Discussions](https://github.com/darrencxl0301/EdgeLLM/discussions)
+[Report Bug](https://github.com/darrencxl0301/SLam/issues) · [Request Feature](https://github.com/darrencxl0301/SLam/issues) · [Discussions](https://github.com/darrencxl0301/SLam/discussions)
 
 **Made with ❤️ for democratizing AI**
 
